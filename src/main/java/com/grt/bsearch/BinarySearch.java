@@ -4,8 +4,8 @@ package com.grt.bsearch;
 public class BinarySearch {
 	public static void main(String[] args){
 		BinarySearch obj = new BinarySearch();
-		int[] nums = {-1,0,3,5,9,12};
-		int target = 9;
+		int[] nums = {1,3};
+		int target = 3;
 		int result = obj.search(nums, target);
 		System.out.println("result:"+result);
 	}
@@ -18,7 +18,7 @@ public class BinarySearch {
         int right = nums.length-1;
         
         while(right>=left){
-            int mid = (left+right)/2;
+            int mid = left+(right-left)/2;
         	if(nums[mid]==target){
         		return mid;
         	}else if(nums[mid]>target){
